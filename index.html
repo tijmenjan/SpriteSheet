@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<title>SpriteSheet examples - Tijmen Mulder - Mulder She Wrote</title>
+<head>
+	<script src="js/jquery-1.10.1.min.js"></script>
+	<script src="js/SpriteSheet.js"></script>
+	<script src="js/BetterTimer.js"></script>
+<style>
+	.example {
+		position:relative;
+		clear:both;
+		float:left;
+		font-family:arial;
+	}
+
+	.small {
+		font-size:11px;
+		padding-bottom:20px;
+	}
+
+	.bold {
+		font-weight:bold;
+	}
+
+</style>
+</head>
+<body style='background-color:yellow;'>
+	<div class='example bold'>Example 1: png spritesheet in HTML (3.9 MB), works in IE7</div>
+	<div class='example small'>var example1 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.png","#example1",example1Callback,1,"html");</div>
+	<div id='buttons1' class='example'></div>
+	<div id='example1text' class='example'></div>
+	<div id='example1' class='example'></div>
+
+	<div class='example bold'>Example 2: png spritesheet in CANVAS (3.9 MB)</div>
+	<div class='example small'>var example2 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.png","#example2",example2Callback,1,"canvas");</div>
+	<div id='buttons2' class='example'></div>
+	<div id='example2text' class='example'></div>
+	<div id='example2' class='example'></div>
+
+	<div class='example bold'>Example 3: masked JPEG spritesheet in HTML (no transparency) (688.3 KB), works in IE7</div>
+	<div class='example small'>var example3 = new SpriteSheet("assets/ginegrdance.json","assets/gingerdance.jpg","#example3",example3Callback,1,"html");</div>
+	<div id='buttons3' class='example'></div>
+	<div id='example3text' class='example'></div>
+	<div id='example3' class='example'></div>
+
+	<div class='example bold'>Example 4: masked JPEG spritesheet in CANVAS (1.14 MB)</div>
+	<div class='example small'>var example4 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.jpg","#example4",example4Callback,1,"canvas");</div>
+	<div id='buttons4' class='example'></div>
+	<div id='example4text' class='example'></div>
+	<div id='example4' class='example'></div>
+	
+
+<script>
+
+	var example1;
+	var example2;
+	var example3;
+	var example4;
+
+	function setText(number,text) {
+		$("#example"+number+"text").text(text);
+	}
+	
+	function makeButton(text,action,number) {
+		var r = $("<input type='button' class='button'  value='"+text+"'/>");
+		r.click(function() {
+			eval(action);
+			setText(number,action);
+		});
+		return r;
+	}
+
+	function makeButtons(number) {
+		var buttons = $("#buttons"+number);
+		buttons.append(makeButton("play once","example"+number+".play()",number));
+		buttons.append(makeButton("stop","example"+number+".stop()",number));
+		buttons.append(makeButton("jump to frame 100","example"+number+".gotoFrame(100)",number));
+		buttons.append(makeButton("play 10 fps","example"+number+".play(1,206,null,10)",number));
+		buttons.append(makeButton("play 100 fps","example"+number+".play(1,206,null,100)",number));
+		buttons.append(makeButton("play 100 fps reverse","example"+number+".play(206,1,null,100)",number));
+		buttons.append(makeButton("play & loop","example"+number+".play(1,206,'loop')",number));
+		buttons.append(makeButton("play to frame 150","example"+number+".playTo(150)",number));
+		buttons.append(makeButton("play frame 80-90 & yoyo","example"+number+".play(80,90,'yoyo')",number));
+		buttons.append(makeButton("play frame 80-90","example"+number+".play(80,90)",number));
+		buttons.append(makeButton("play frame 90-80","example"+number+".play(90,80)",number));
+		
+	}
+
+	function example1Callback(action) {
+		if (action == 'loaded') {
+			makeButtons("1");
+			example1.gotoFrame(1);
+			
+		}
+	}
+
+	function example2Callback(action) {
+		if (action == 'loaded') {
+			makeButtons("2");
+			example2.gotoFrame(1);
+			
+		}
+	}
+
+	function example3Callback(action) {
+		if (action == 'loaded') {
+			makeButtons("3");
+			example3.gotoFrame(1);
+		}
+	}
+
+
+	function example4Callback(action) {
+		if (action == 'loaded') {
+			makeButtons("4");
+			example4.gotoFrame(1);
+		}
+	}
+
+	var example1 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.png","#example1",example1Callback,1,"html");
+	var example2 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.png","#example2",example2Callback,1,"canvas");
+	var example3 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.jpg","#example3",example3Callback,1,"html");
+	var example4 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.jpg","#example4",example4Callback,1,"canvas");
+</script>	
+</body>
+</html>
