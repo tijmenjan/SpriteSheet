@@ -13,7 +13,7 @@ In texturepacker, select JSON (Array) as output, and disable 'Allow rotation'.
 You can use the texturepacker png directly, or create jpeg and png mask.
 When using a jpeg file, it will look for filename-mask.png. Look at the attached assets if it's not clear.
 
-USAGE
+Usage
 ==============
 name = new SpriteSheet(atlas file, image file, container css selector, callback function,scale (optional), type (html or canvas, optional), fps (optional));
 
@@ -23,19 +23,19 @@ EXAMPLE
 
 
 
-METHODS
+Methods
 ==============
-play(from frame (optional), to frame (optional), type (nothing, yoyo or loop, optional), fps (optional));
+**play(from frame (optional), to frame (optional), type (nothing, yoyo or loop, optional), fps (optional));**
 
-DESCRIPTION
+DESCRIPTION  
 Will play an animation.
 
-EXAMPLE
+EXAMPLE  
 ss.play(); 
 
-NOTES
+NOTES  
 Without a from and to frame the animation will play all the frames
---------------
+
 ss.playto(frame,fps (optional))
 
 DESCRIPTION
