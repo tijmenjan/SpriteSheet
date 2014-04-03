@@ -76,6 +76,12 @@
 	<div id='buttons4' class='example'></div>
 	<div id='example4text' class='example'></div>
 	<div id='example4' class='example'></div>
+
+	<div class='example bold'>Example 5: masked JPEG spritesheet in CANVAS, SpriteSheet scaled to 47%, then upscaled in the class. (392 KB)</div>
+	<div class='example small'>var example5 = new SpriteSheet("assets/gingerdance-tiny.json","assets/gingerdance-tiny.jpg","#example5",example5Callback,2.127,"canvas");</div>
+	<div id='buttons5' class='example'></div>
+	<div id='example5text' class='example'></div>
+	<div id='example5' class='example'></div>
 	
 
 <script>
@@ -145,10 +151,18 @@
 		}
 	}
 
+	function example5Callback(action) {
+		if (action == 'loaded') {
+			makeButtons("5");
+			example5.gotoFrame(1);
+		}
+	}
+
 	var example1 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.png","#example1",example1Callback,1,"html");
 	var example2 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.png","#example2",example2Callback,1,"canvas");
 	var example3 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.jpg","#example3",example3Callback,1,"html");
 	var example4 = new SpriteSheet("assets/gingerdance.json","assets/gingerdance.jpg","#example4",example4Callback,1,"canvas");
+	var example5 = new SpriteSheet("assets/gingerdance-tiny.json","assets/gingerdance-tiny.jpg","#example5",example5Callback,2.127,"canvas");
 </script>	
 </body>
 </html>
