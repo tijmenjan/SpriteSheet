@@ -1,6 +1,9 @@
 SpriteSheet 1.0
+
 Tijmen Mulder - Mulder She Wrote
+
 Questions? Suggestions?
+
 Tijmen@muldershewrote.com
 
 Description
@@ -17,7 +20,8 @@ USAGE
 --------------
 name = new SpriteSheet(atlas file, image file, container css selector, callback function,scale (optional), type (html or canvas, optional), fps (optional));
 EXAMPLE
-ss = new SpriteSheet("animation.json", "animation.png", "#sscontainer", callbackfunction,1, 'canvas', 30);
+--------------
+	ss = new SpriteSheet("animation.json", "animation.png", "#sscontainer", callbackfunction,1, 'canvas', 30);
 
 
 
