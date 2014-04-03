@@ -27,30 +27,29 @@ Methods
 ==============
 **play(from frame (optional), to frame (optional), type (nothing, yoyo or loop, optional), fps (optional));**
 
-DESCRIPTION  
+*DESCRIPTION*  
 Will play an animation.
 
-EXAMPLE  
+*EXAMPLE*  
 ss.play(); 
 
-NOTES  
+*NOTES*   
 Without a from and to frame the animation will play all the frames
 
-ss.playto(frame,fps (optional))
+**ss.playto(frame,fps (optional))**  
 
-DESCRIPTION
+*DESCRIPTION*  
 It plays to a frame from the current frame (so backwards of forwards).
---------------
-stop()
 
-DESCRIPTION
---------------
+
+**stop()**  
+
+*DESCRIPTION*  
 Well, it stops the animation....
 
-gotoFrame(frame)
+**gotoFrame(frame)**  
 
-DESCRIPTION
---------------
+*DESCRIPTION*
 Goes to frame and stops a playing animation
 
 CALLBACK FUNCTION
@@ -58,8 +57,8 @@ CALLBACK FUNCTION
 
 The callback function will receive 1 argument. For now it can be 'loaded' or 'complete' (in an animation is complete).
 
-EXAMPLE
---------------
+**EXAMPLE**  
+
 	function callbackfunction(action) {
 		if (action == 'loaded') {
 			ss.play();
