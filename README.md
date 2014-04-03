@@ -14,10 +14,11 @@ You can use the texturepacker png directly, or create jpeg and png mask.
 When using a jpeg file, it will look for filename-mask.png. Look at the attached assets if it's not clear.
 
 USAGE
---------------
+==============
 name = new SpriteSheet(atlas file, image file, container css selector, callback function,scale (optional), type (html or canvas, optional), fps (optional));
+
 EXAMPLE
---------------
+
 	ss = new SpriteSheet("animation.json", "animation.png", "#sscontainer", callbackfunction,1, 'canvas', 30);
 
 
