@@ -49,7 +49,7 @@ Well, it stops the animation....
 
 **gotoFrame(frame)**  
 
-*DESCRIPTION*
+*DESCRIPTION*  
 Goes to frame and stops a playing animation
 
 CALLBACK FUNCTION
