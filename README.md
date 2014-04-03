@@ -3,6 +3,10 @@ Tijmen Mulder - Mulder She Wrote
 Questions? Suggestions?  
 Tijmen@muldershewrote.com  
 
+Live example
+==============
+http://www.muldershewrote.nl/examples/tutorial-spritesheet
+
 Description
 ==============
 This simple lib will allow you to play a spritesheet created with texturepacker.
