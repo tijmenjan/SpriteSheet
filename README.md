@@ -9,12 +9,12 @@ http://www.muldershewrote.nl/examples/tutorial-spritesheet
 
 Description
 ==============
-This simple lib will allow you to play a spritesheet created with texturepacker.
+This simple lib will allow you to play a spritesheet created with TexturePacker.
 It's created for usage in a website, not a canvas game. There are other libs for that purpose.
 
-In texturepacker, select JSON (Array) as output, and disable 'Allow rotation'.
+In TexturePacker, select JSON (Array) as output, and disable 'Allow rotation'.
 
-You can use the texturepacker png directly, or create jpeg and png mask.
+You can use the TexturePacker png directly, or create jpeg and png mask.
 When using a jpeg file, it will look for filename-mask.png. Look at the attached assets if it's not clear.
 
 Usage
