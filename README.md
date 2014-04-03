@@ -1,7 +1,7 @@
-SpriteSheet 1.0 
-Tijmen Mulder - Mulder She Wrote 
-Questions? Suggestions? 
-Tijmen@muldershewrote.com 
+SpriteSheet 1.0  
+Tijmen Mulder - Mulder She Wrote  
+Questions? Suggestions?  
+Tijmen@muldershewrote.com  
 
 Description
 ==============
